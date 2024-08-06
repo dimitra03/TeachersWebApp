@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Teachers List</title>
+<link rel="stylesheet" href="/TeachersWebApp/static/css/teachers.css">
 </head>
 <body>
 
@@ -30,18 +31,25 @@
     </c:forEach>
 	
 	</table> -->
+    <div class="center">
+        <h1>Teachers List</h1>
+        <c:if test="${not empty teachers}">
+            <ul>
+                <c:forEach var="teacher" items="${teachers}">
+                    <li>ID: ${teacher.id}, Last Name: ${teacher.lastName}, First Name: ${teacher.firstName}</li>
+                </c:forEach>
+            </ul>
+        </c:if>
+        <c:if test="${empty teachers}">
+            <p>No teachers found.</p>
+        </c:if>
 
-    <h1>Teachers List</h1>
-    <c:if test="${not empty teachers}">
-        <ul>
-            <c:forEach var="teacher" items="${teachers}">
-                <li>ID: ${teacher.id}, Last Name: ${teacher.lastName}, First Name: ${teacher.firstName}</li>
-            </c:forEach>
-        </ul>
-    </c:if>
-    <c:if test="${empty teachers}">
-        <p>No teachers found.</p>
-    </c:if>
+        <div class="bot-gap">
+            <form method="POST" action="/TeachersWebApp/jsps/teachersmenu.jsp">
+                <button class="returnButton" type="submit">Επιστροφή</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
