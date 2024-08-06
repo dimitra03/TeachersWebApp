@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<table>
+<!-- 	<table>
 	<tr>
 		<th>ID</th>
 		<th>First Name</th>
@@ -19,16 +19,29 @@
 		
 	</tr>
 	
+
 	<c:forEach var = "row" items = "${teachers}">
-		<tr>
+
 			<td> ${row.id} </td>
-			<td> ${row.firstName} </td>
-			<td> ${row.lastName} </td>
+ 			<td> ${row.firstName} </td>
+			<td> ${row.lastName} </td> 
 			<td><a href="/TeachersWebApp/TeacherDeleteController?id=${row.id}">Delete</a></td>
-		</tr>
-	</c:forEach>
+
+    </c:forEach>
 	
-	</table>
+	</table> -->
+
+    <h1>Teachers List</h1>
+    <c:if test="${not empty teachers}">
+        <ul>
+            <c:forEach var="teacher" items="${teachers}">
+                <li>ID: ${teacher.id}, Last Name: ${teacher.lastName}, First Name: ${teacher.firstName}</li>
+            </c:forEach>
+        </ul>
+    </c:if>
+    <c:if test="${empty teachers}">
+        <p>No teachers found.</p>
+    </c:if>
 
 </body>
 </html>
