@@ -77,18 +77,18 @@ public class TeacherDAOImpl implements ITeacherDAO {
 
 	@Override
 	public List<Teacher> getTeachersBySurname(String surname) throws SQLException {
-		String sql = "SELECT TEACHER_ID, S_NAME, F_Name FROM TEACHERS WHERE S_NAME LIKE '" 
-				+ surname + "%'";
-		//String sql = "SELECT TEACHER_ID, S_NAME, F_Name FROM TEACHERS WHERE S_NAME LIKE ?";
+		//String sql = "SELECT TEACHER_ID, S_NAME, F_Name FROM TEACHERS WHERE S_NAME LIKE '" + surname + "%'";
+				
+		String sql = "SELECT TEACHER_ID, S_NAME, F_Name FROM TEACHERS WHERE S_NAME LIKE ?";
 		
 	    PreparedStatement pst =  openConnection().prepareStatement(sql);
-	    //pst.setString(1, surname + "%");
+	    pst.setString(1, surname + "%");
 	    
-	    ResultSet rs = pst.executeQuery(sql);
+	    ResultSet rs = pst.executeQuery();
 	    
 	    List<Teacher> teachers = new ArrayList<>();
 	    
-	    rs.beforeFirst();
+	    //rs.beforeFirst();
 	    while (rs.next()) {
 	    	Teacher teacher = new Teacher();
 		    	
