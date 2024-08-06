@@ -1,0 +1,33 @@
+body {
+	background: #A57D84;
+	margin: 0;
+    align-items: center;
+    
+}
+
+.center {
+	align-items: center;
+    
+}
+
+.returnButton {
+    background-color: white;
+
+}
+
+body {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center text inside elements */
+    background: #A57D84 ; /* Optional background color */
+    align-items: center;
+}
+
+/* Optional styling for content */
+.content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
