@@ -1,0 +1,67 @@
+
+
+body {
+    
+    background-color: #286088;
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+
+input[type=text].search {
+	width: 200px;
+	height: 50px;
+	background-image: url('/TeachersWebApp/static/img/search.png');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: 45px 45px;
+	padding-left: 45px;
+    border-radius: 12px;
+}
+
+.searchById > p {
+    color: #FFF;
+font-family: "Crimson Text";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.searchByLastName > p {
+    color: #FFF;
+font-family: "Crimson Text";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.li > p {
+    color: #FFF;
+font-family: "Crimson Text";
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.search-btn {
+        width: 150px;        /* Set the width of the button */
+        height: 50px;        /* Set the height of the button */
+        padding: 15px 30px;  /* Add padding for more internal space */
+        font-size: 18px;     /* Increase the font size */
+        background-color: #9DCEED; /* Change background color */
+        color: black;        /* Set text color */
+        border: none;        /* Remove border */
+        border-radius: 5px;  /* Optional: make edges rounded */
+        cursor: pointer;     /* Change cursor on hover */
+        border-radius: 9px;
+}
+
+
