@@ -87,4 +87,8 @@ public interface ITeacherService {
 	 */
 	List<Teacher> getTeachersBySurname(String surname) 
 			throws SQLException;
+
+
+	List<Teacher> getTeacherById(int id) throws SQLException;
+	
 }
