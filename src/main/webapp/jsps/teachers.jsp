@@ -11,7 +11,37 @@
 </head>
 <body>
 
-<!-- 	<table>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    
+        <c:forEach var="row" items="${teachers}">
+            <tr>
+                <td>${row.id}</td>
+                <td>${row.lastName}</td>
+                <td>${row.firstName}</td>
+                <td><a href="/TeachersWebApp/TeacherDeleteController?id=${row.id}">Delete</a></td>
+                <!-- <td><a href="/TeachersWebApp/jsps/update.jsp?id=${row.id}?${row.lastName}?${row.firstName}" target="_blank">Update</a></td> -->
+            </tr>
+        </c:forEach>
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+    <!-- <table>
 	<tr>
 		<th>ID</th>
 		<th>First Name</th>
@@ -30,8 +60,8 @@
 
     </c:forEach>
 	
-	</table> -->
-    <div class="center">
+</table> -->
+    <!-- <div class="center">
         <h1>Teachers List</h1>
         <c:if test="${not empty teachers}">
             <ul>
@@ -49,7 +79,7 @@
                 <button class="returnButton" type="submit">Επιστροφή</button>
             </form>
         </div>
-    </div>
+    </div> -->
 
 </body>
 </html>
