@@ -23,6 +23,18 @@
   	<description></description>
   	<servlet-class>gr.aueb.elearn.teacherapp.controller.TeacherInsertController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>TeacherUpdateController</servlet-name>
+  	<display-name>TeacherUpdateController</display-name>
+  	<description></description>
+  	<servlet-class>gr.aueb.elearn.teacherapp.controller.TeacherUpdateController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TeacherSearchByIdController</servlet-name>
+  	<display-name>TeacherSearchByIdController</display-name>
+  	<description></description>
+  	<servlet-class>gr.aueb.elearn.teacherapp.controller.TeacherSearchByIdController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginController</servlet-name>
   	<url-pattern>/LoginController</url-pattern>
@@ -34,6 +46,14 @@
   <servlet-mapping>
   	<servlet-name>TeacherInsertController</servlet-name>
   	<url-pattern>/TeacherInsertController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TeacherUpdateController</servlet-name>
+  	<url-pattern>/TeacherUpdateController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TeacherSearchByIdController</servlet-name>
+  	<url-pattern>/TeacherSearchByIdController</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>
