@@ -37,7 +37,7 @@ public class TeacherSearchController extends HttpServlet {
 		List<Teacher> teachers = new ArrayList<>();
 		
 		response.setContentType("text/html");
-		String lastName = request.getParameter("searchInput");
+		String lastName = request.getParameter("searchInput2");
 		
 		//teacherDTO.setLastName(lastName);
 		

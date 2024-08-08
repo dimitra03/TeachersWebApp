@@ -49,5 +49,6 @@ public class TeacherDeleteController extends HttpServlet {
 			request.getRequestDispatcher("/jsps/teachers.jsp").include(request, response);
 		}	
 	}
+	
 
 }
