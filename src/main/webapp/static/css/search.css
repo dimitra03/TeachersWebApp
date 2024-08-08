@@ -1,17 +1,31 @@
-
-
 body {
-    
     background-color: #286088;
     margin: 0;
+}
+
+.top-btn {
+    position: absolute; /* Position the button container absolutely */
+    top: 20px; /* Distance from the top of the page */
+    left: 20px; /* Distance from the left of the page */
+    
+}
+
+.returnButton {
+    width: 170px;        /* Set the width of the button */
+    height: 40px; 
+    padding: 10px 20px; /* Add padding for better appearance */
+    font-size: 18px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #9DCEED; /* Change background color */
+    color: black;        /* Set text color */
+    border: none;        /* Remove border */
+    border-radius: 9px;  /* Optional: make edges rounded */
+    font-family: "Crimson Text";
 }
 
 .center {
     text-align: center;
 }
-
-
-
 
 input[type=text].search {
 	width: 200px;
@@ -63,5 +77,3 @@ line-height: normal;
         cursor: pointer;     /* Change cursor on hover */
         border-radius: 9px;
 }
-
-
