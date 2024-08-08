@@ -9,5 +9,5 @@ public interface ITeacherDAO {
 	void delete(Teacher teacher) throws SQLException;
 	void update(Teacher oldTeacher, Teacher newTeacher) throws SQLException;
 	List<Teacher> getTeachersBySurname(String surname) throws SQLException;
-	Teacher getTeacherById(int id) throws SQLException;
+	List<Teacher> getTeacherById(int id) throws SQLException;
 }
