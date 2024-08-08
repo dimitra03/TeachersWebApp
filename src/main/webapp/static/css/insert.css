@@ -1,0 +1,59 @@
+body {
+    background-color: #286088;
+    margin: 0;
+}
+
+.top-btn {
+    position: absolute; /* Position the button container absolutely */
+    top: 20px; /* Distance from the top of the page */
+    left: 20px; /* Distance from the left of the page */
+    
+}
+
+.returnButton {
+    width: 170px;        /* Set the width of the button */
+    height: 40px; 
+    padding: 10px 20px; /* Add padding for better appearance */
+    font-size: 18px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #9DCEED; /* Change background color */
+    color: black;        /* Set text color */
+    border: none;        /* Remove border */
+    border-radius: 9px;  /* Optional: make edges rounded */
+    font-family: "Crimson Text";
+}
+
+.center {
+    text-align: center;
+    margin-top: 80px;
+}
+
+input[type=text].insert {
+	width: 200px;
+	height: 50px;
+	padding-left: 45px;
+    border-radius: 12px;
+}
+
+.insert-btn {
+    width: 150px;        /* Set the width of the button */
+    height: 50px;        /* Set the height of the button */
+    padding: 15px 30px;  /* Add padding for more internal space */
+    font-size: 18px;     /* Increase the font size */
+    background-color: #9DCEED; /* Change background color */
+    color: black;        /* Set text color */
+    border: none;        /* Remove border */
+    border-radius: 5px;  /* Optional: make edges rounded */
+    cursor: pointer;     /* Change cursor on hover */
+    border-radius: 9px;
+}
+
+
+.enterDetails p {
+    color: #FFF;
+    font-family: "Crimson Text";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
