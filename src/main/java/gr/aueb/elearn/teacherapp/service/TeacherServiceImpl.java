@@ -66,4 +66,8 @@ public class TeacherServiceImpl implements ITeacherService {
 	public List<Teacher> getTeachersBySurname(String surname) throws SQLException {	
 		return teacherDAO.getTeachersBySurname(surname);
 	}
+	
+	public List<Teacher> getTeacherById(int id) throws SQLException {	
+		return teacherDAO.getTeacherById(id);
+	}
 }
