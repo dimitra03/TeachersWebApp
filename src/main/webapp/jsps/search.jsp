@@ -19,8 +19,8 @@
         <div class="content">
             <div class="searchById">
                 <p>Search by ID</p>
-                    <form method="GET" action="/TeachersWebApp/TeacherSearchController">
-                        <input name="searchInput" type="text" class="search rounded" placeholder="Insert teacher's ID" autofocus/>
+                    <form method="GET" action="/TeachersWebApp/TeacherSearchByIdController">
+                        <input name="searchInput1" type="text" class="search rounded" placeholder="Insert teacher's ID" autofocus/>
                         <br><br>
 
                         <button class="search-btn rounded color-btn" type="submit">Search</button>
@@ -29,7 +29,7 @@
             <div class="searchByLastName">
                 <p>Search by Last Name</p>
                     <form method="GET" action="/TeachersWebApp/TeacherSearchController">
-                        <input name="searchInput" type="text" class="search rounded" placeholder="Insert teacher's Last Name" autofocus/>
+                        <input name="searchInput2" type="text" class="search rounded" placeholder="Insert teacher's Last Name" autofocus/>
                         <br><br>
 
                         <button class="search-btn rounded color-btn" type="submit">Search</button>
