@@ -1,5 +1,5 @@
 body {
-	background: #A57D84;
+	
 	margin: 0;
     align-items: center;
     
@@ -15,12 +15,28 @@ body {
 
 }
 
+table {
+    border-collapse: collapse; /* Ensures borders do not overlap */
+    width: 100%; /* Makes the table take the full width */
+}
+
+th, td {
+    padding: 10px; /* Adds space inside each header and data cell */
+    text-align: left; /* Aligns text to the left */
+    border: 1px solid #ddd; /* Adds a border to cells */
+}
+
+th {
+    background-color: #286088; /* Light gray background for headers */
+}
+
+
 body {
     display: flex; /* Use Flexbox for layout */
     justify-content: center; /* Center horizontally */
     margin: 0; /* Remove default margin */
     text-align: center; /* Center text inside elements */
-    background: #A57D84 ; /* Optional background color */
+    
     align-items: center;
 }
 
