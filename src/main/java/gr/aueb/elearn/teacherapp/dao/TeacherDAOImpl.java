@@ -106,20 +106,24 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	}
 
 	@Override
-	public Teacher getTeacherById(int id) throws SQLException {
+	public List<Teacher> getTeacherById(int id) throws SQLException {
 		boolean teacherFound = false;
 		
-		String sql = "SELECT * FROM TEACHERS WHERE TEACHER_ID = " 
-				+ id;
+		String sql = "SELECT * FROM TEACHERS WHERE TEACHER_ID = ?" ;
+			
 	    PreparedStatement pst =  openConnection().prepareStatement(sql);
-	    ResultSet rs = pst.executeQuery(sql);
+	    pst.setInt(1, id);
+	    ResultSet rs = pst.executeQuery();
 	    
-	    Teacher teacher = new Teacher();
+	    List<Teacher> teachers = new ArrayList<>();
 	    
 	    if (rs.next()) {
+	    	Teacher teacher = new Teacher();
+	    	
 	    	teacher.setId(rs.getInt("TEACHER_ID"));
 	    	teacher.setLastName(rs.getString("S_NAME"));
 	    	teacher.setFirstName(rs.getString("F_NAME"));
+	    	teachers.add(teacher); 	
 	    	//return teacher;
 	    	teacherFound = true;
 	    }
@@ -128,7 +132,7 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	    closeStmt(pst);
 	    closeConnection();
 	    
-	    return (teacherFound) ? teacher : null;
+	    return (teacherFound) ? teachers : null;
 	    
 	    //return null;
 	}	
