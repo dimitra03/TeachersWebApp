@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,6 +22,7 @@ import gr.aueb.elearn.teacherapp.service.TeacherServiceImpl;
 /**
  * Servlet implementation class TeacherSearchByIdController
  */
+
 public class TeacherSearchByIdController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -46,8 +48,17 @@ public class TeacherSearchByIdController extends HttpServlet {
 			request.setAttribute("teachers", teachers);
 			request.getRequestDispatcher("/jsps/teachers.jsp").forward(request, response);
 		} else {
-			response.getWriter().write("<h1 style=\"color:red\">Teacher does not exist</h1>");
-			request.getRequestDispatcher("/jsps/teachersmenu.jsp").include(request, response);
+			
+			/*
+			 * response.getWriter().
+			 * write("<h1 style=\"text-align:center; color:red; margin-top: 20px;\">Teacher does not exist</h1>"
+			 * );
+			 * request.getRequestDispatcher("/jsps/search.jsp").include(request,response);
+			 * //fix
+			 */	
+			String error = "idmissing";
+			request.setAttribute("error", error);
+			request.getRequestDispatcher("/jsps/errorpage.jsp").forward(request, response);
 		}
 	}
 
