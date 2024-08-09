@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,8 @@
     <div class="top-btn">
         <button class="returnButton" onclick="goToMainPage()">Return to Menu</button>
     </div>
-    <br><br>
+    <br>
+
 
     <div class="center">
     
