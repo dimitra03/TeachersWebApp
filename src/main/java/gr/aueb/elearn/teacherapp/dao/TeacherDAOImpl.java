@@ -60,11 +60,19 @@ public class TeacherDAOImpl implements ITeacherDAO {
 
 	@Override
 	public void update(Teacher oldTeacher, Teacher newTeacher) throws SQLException {
-		String sql = "UPDATE TEACHERS SET S_NAME = '" + newTeacher.getLastName() + "', " + "F_NAME = '" 
-				+ newTeacher.getFirstName() + "' WHERE TEACHER_ID = " + oldTeacher.getId();
-		System.out.println(sql);
+		/*
+		 * String sql = "UPDATE TEACHERS SET S_NAME = '" + newTeacher.getLastName() +
+		 * "', " + "F_NAME = '" + newTeacher.getFirstName() + "' WHERE TEACHER_ID = " +
+		 * oldTeacher.getId(); System.out.println(sql);
+		 */
+		String sql = "UPDATE TEACHERS SET S_NAME = ?, F_NAME = ? WHERE TEACHER_ID = ?";
+				
 		
 		PreparedStatement pst = openConnection().prepareStatement(sql);
+		pst.setString(1, newTeacher.getLastName());
+		pst.setString(2, newTeacher.getFirstName());
+		pst.setInt(3, oldTeacher.getId());
+		
 		int numberOfRowsAffected = pst.executeUpdate();
 	      
 	    JOptionPane.showMessageDialog(null, numberOfRowsAffected + " rows affected", 
