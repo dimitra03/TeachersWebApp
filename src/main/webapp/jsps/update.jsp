@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false" %>
+<%@ page pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 
@@ -12,17 +15,17 @@
     <h1>Update Teacher Information</h1>
     <div class="enterDetails">
         <form method="POST" action="/TeachersWebApp/TeacherUpdateController">
-           <!--  Hidden field to store the ID
-            <input type="hidden" name="id" value="<%= id %>"/> -->
-    
-            <p>Enter new Last Name</p>
-            <input name="lastName" type="text" class="insert rounded" placeholder="Last name" autofocus/><br><br>
-    
-            <p>Enter new First Name</p>
-            <input name="firstName" type="text" class="insert rounded" placeholder="First name" autofocus/>
-            <br><br>
+            <input type="hidden" name="id" value="${param.id}" />
+            <input type="hidden" name="lastName" id="lastName" value="${param.lastName}"/>
+            <input type="hidden" name="firstName" id="firstName" value="${param.firstName}"/>
+            <br>
+            <label>New Last Name:</label>
+            <input name="newLastName" type="text" class="insertNew" placeholder="Insert new last name" autofocus/>
+            <label>New First Name:</label>
+            <input name="newFirstName" type="text" class="insertNew" placeholder="Insert new first name" autofocus/>
+            <br>
             
-            <button class="insert-btn" type="submit">Update</button>
+            <input type="submit" value="Update" />
         </form>
     </div>
     
