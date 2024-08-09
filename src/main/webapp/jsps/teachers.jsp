@@ -26,7 +26,7 @@
                 <td>${row.lastName}</td>
                 <td>${row.firstName}</td>
                 <td><a href="/TeachersWebApp/TeacherDeleteController?id=${row.id}">Delete</a></td>
-                <!-- <td><a href="/TeachersWebApp/jsps/update.jsp?id=${row.id}?${row.lastName}?${row.firstName}" target="_blank">Update</a></td> -->
+                <td><a href="/TeachersWebApp/jsps/update.jsp?id=${row.id}&lastName=${row.lastName}&firstName=${row.firstName}" target="_blank">Update</a></td>
             </tr>
         </c:forEach>
     </table>
