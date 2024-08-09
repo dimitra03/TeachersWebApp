@@ -1,0 +1,30 @@
+h1 {
+    text-align:center;
+    color:red; 
+
+}
+
+body {
+    background-color: #286088;
+    margin: 0;
+}
+
+.showError {
+    text-align:center;
+}
+
+.returnButton {
+        
+        width: 170px;        /* Set the width of the button */
+        height: 40px; 
+        padding: 10px 20px; /* Add padding for better appearance */
+        font-size: 18px; /* Set font size */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        background-color: #9DCEED; /* Change background color */
+        color: black;        /* Set text color */
+        border: none;        /* Remove border */
+        border-radius: 9px;  /* Optional: make edges rounded */
+        font-family: "Crimson Text";
+    
+    
+}
