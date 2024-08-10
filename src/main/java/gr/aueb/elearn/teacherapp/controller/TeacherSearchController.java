@@ -51,8 +51,16 @@ public class TeacherSearchController extends HttpServlet {
 			request.setAttribute("teachers", teachers);
 			request.getRequestDispatcher("/jsps/teachers.jsp").forward(request, response);
 		} else {
-			response.getWriter().write("<h1 style=\"color:red\">Teacher does not exist</h1>");
-			request.getRequestDispatcher("/jsps/teachersmenu.jsp").include(request, response);
+			/*
+			 * response.getWriter().
+			 * write("<h1 style=\"color:red\">Teacher does not exist</h1>");
+			 * request.getRequestDispatcher("/jsps/teachersmenu.jsp").include(request,
+			 * response);
+			 */
+			String error = "lastNameNotExists";
+			request.setAttribute("error", error);
+			request.getRequestDispatcher("/jsps/errorpage.jsp").forward(request, response);
+		
 		}
 	}
 }
