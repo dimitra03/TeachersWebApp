@@ -5,16 +5,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Επιτυχής Εισαγωγή</title>
+	<meta charset="UTF-8">
+	<title>Successful Insert</title>
+	<link rel="stylesheet" href="/TeachersWebApp/static/css/teacherinserted.css">
+	<script src="/TeachersWebApp/static/js/functions.js"></script>
 </head>
 <body>
-	<p>	Teacher: ${insertedTeacher.id} <br>
-	 	${insertedTeacher.lastName} <br>
-	 	${insertedTeacher.firstName} <br>
-	   	successfully inserted!
-	
-	<a href="/TeachersWebApp/jsps/teachersmenu.jsp">Επιστροφή</a>
-
+	<div class="teacher">
+		<h1 class="heading">Teacher with</h1>
+			<p class="details">ID: ${insertedTeacher.id} <br>
+			Last Name: ${insertedTeacher.lastName} <br>
+			First Name: ${insertedTeacher.firstName} </p>
+			<p>was successfully inserted!</p>
+		
+		<button class="returnButton" onclick="goToMainPage()">Return</button>
+	</div>
 </body>
 </html>
