@@ -15,13 +15,21 @@
     <div class="showError">
         <c:choose>
             <c:when test="${error == 'idmissing'}">
-                <p>ID parameter is missing. Please provide a valid ID to search for.</p>
+                <p>This ID does not exist. Please provide a valid ID to search for.</p>
             </c:when>
+            <c:when test="${error == 'idexists'}">
+                <p>This ID already exists. Please provide another ID.</p>
+            </c:when>
+            <c:when test="${error == 'lastNameNotExists'}">
+                <p>This teacher does not exist. Please provide another last name.</p>
+            </c:when>
+            
+
             <c:otherwise>
                 <p>An unexpected error occurred. Please try again.</p>
             </c:otherwise>    
         </c:choose>
-        <button class="returnButton" onclick="goToSearchPage()">Return to Search</button>
+        <button class="returnButton" onclick="goToMainPage()">Return</button>
 
     </div>
     
