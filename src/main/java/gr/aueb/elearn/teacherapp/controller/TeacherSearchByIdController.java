@@ -36,7 +36,7 @@ public class TeacherSearchByIdController extends HttpServlet {
 		List<Teacher> teachers = new ArrayList<>();
 		
 		response.setContentType("text/html");
-		int id = Integer.parseInt(request.getParameter("searchInput1"));
+		Integer id = Integer.parseInt(request.getParameter("searchInput1"));
 		
 		try {
 			teachers = teacherServ.getTeacherById(id);
@@ -48,14 +48,6 @@ public class TeacherSearchByIdController extends HttpServlet {
 			request.setAttribute("teachers", teachers);
 			request.getRequestDispatcher("/jsps/teachers.jsp").forward(request, response);
 		} else {
-			
-			/*
-			 * response.getWriter().
-			 * write("<h1 style=\"text-align:center; color:red; margin-top: 20px;\">Teacher does not exist</h1>"
-			 * );
-			 * request.getRequestDispatcher("/jsps/search.jsp").include(request,response);
-			 * //fix
-			 */	
 			String error = "idmissing";
 			request.setAttribute("error", error);
 			request.getRequestDispatcher("/jsps/errorpage.jsp").forward(request, response);
