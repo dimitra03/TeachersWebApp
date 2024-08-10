@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Επιτυχής Εισαγωγή</title>
+<title>Επιτυχής Ενημέρωση</title>
     <link rel="stylesheet" href="/TeachersWebApp/static/teacherupdated.css">
     <script src="/TeachersWebApp/static/js/functions.js"></script>
 </head>
