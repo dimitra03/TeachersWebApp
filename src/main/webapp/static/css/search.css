@@ -1,6 +1,27 @@
-body {
+/* body {
     background-color: #286088;
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
     margin: 0;
+} */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1c5075, #3a658d);
+    /* background: linear-gradient(0deg, #5E8CB7 0%, #41698E 35%, #286088 100%); */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    color: #ebebeb;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-style:normal;
+    font-weight: bold;
+    line-height: normal;
+    text-decoration: solid;
+   
 }
 
 .top-btn {
@@ -25,6 +46,12 @@ body {
 
 .center {
     text-align: center;
+    margin-top: 50px;
+}
+
+.extraMessage {
+    text-align: center;
+    margin-top: 10px;
 }
 
 input[type=text].search {
@@ -36,30 +63,22 @@ input[type=text].search {
 	background-size: 45px 45px;
 	padding-left: 45px;
     border-radius: 12px;
+    
 }
 
-.searchById > p {
+.searchById p {
     color: #FFF;
 font-family: "Crimson Text";
-font-size: 32px;
+font-size: 26px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
 
-.searchByLastName > p {
+.searchByLastName p {
     color: #FFF;
 font-family: "Crimson Text";
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-
-.li > p {
-    color: #FFF;
-font-family: "Crimson Text";
-font-size: 48px;
+font-size: 26px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -76,4 +95,5 @@ line-height: normal;
         border-radius: 5px;  /* Optional: make edges rounded */
         cursor: pointer;     /* Change cursor on hover */
         border-radius: 9px;
+        
 }
