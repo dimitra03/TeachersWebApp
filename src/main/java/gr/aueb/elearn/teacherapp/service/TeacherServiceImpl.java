@@ -34,14 +34,14 @@ public class TeacherServiceImpl implements ITeacherService {
 	}
 
 	@Override
-	public void deleteTeacher(TeacherDTO teacherDTO) throws TeacherNotFoundException, SQLException {
+	public boolean deleteTeacher(TeacherDTO teacherDTO) throws TeacherNotFoundException, SQLException {
 		Teacher teacherToDelete = new Teacher();
 		teacherToDelete.setId(teacherDTO.getId());
 		
 		if ((teacherDAO.getTeacherById(teacherToDelete.getId())) == null) 
 			throw new TeacherNotFoundException(teacherToDelete);
 		
-		teacherDAO.delete(teacherToDelete);
+		return teacherDAO.delete(teacherToDelete);
 	}
 
 	@Override
