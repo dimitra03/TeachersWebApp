@@ -36,26 +36,31 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	}
 
 	@Override
-	public void delete(Teacher teacher) throws SQLException {
-		String sql = "DELETE FROM TEACHERS WHERE TEACHER_ID = " + teacher.getId();
+	public boolean delete(Teacher teacher) throws SQLException {
+		String sql = "DELETE FROM TEACHERS WHERE TEACHER_ID = ?";
 		int dialogButton;
-		
+		boolean done = false;
 		PreparedStatement pst = openConnection().prepareStatement(sql);
+		pst.setInt(1, teacher.getId());
 		
-        dialogButton = JOptionPane.showConfirmDialog (null, "����� ��������;", 
+        dialogButton = JOptionPane.showConfirmDialog (null, "Are you sure?", 
       		  "Warning", JOptionPane.YES_NO_OPTION);
 
         if (dialogButton == JOptionPane.YES_OPTION){
-      	  int numberOfRowsAffected = pst.executeUpdate();
-      	  JOptionPane.showMessageDialog (null, numberOfRowsAffected + " rows deleted successfully", 
-          		  "DELETE", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-        	return;
+			/*
+			 * int numberOfRowsAffected = pst.executeUpdate(); JOptionPane.showMessageDialog
+			 * (null, numberOfRowsAffected + " rows deleted successfully", "DELETE",
+			 * JOptionPane.INFORMATION_MESSAGE);
+			 */
+        	pst.executeUpdate();
+        	done = true;
         }
         
+
       	// pst.close();
         closeStmt(pst);
       	closeConnection();
+      	return done;
 	}
 
 	@Override
