@@ -1,6 +1,11 @@
-body {
-    background-color: #286088;
+html, body {
+    height: 100%;
     margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1c5075, #3a658d);
+    /* background: linear-gradient(0deg, #5E8CB7 0%, #41698E 35%, #286088 100%); */
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .top-btn {
