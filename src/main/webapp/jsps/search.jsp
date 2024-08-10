@@ -1,4 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false" %>
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,32 +15,41 @@
     <div class="top-btn">
         <button class="returnButton" onclick="goToMainPage()">Return to Menu</button>
     </div>
-    <br>
 
+
+    <div class="extraMessage">
+        <c:set var="message" value="${param.mes}" />
+
+        <c:if test="${not empty message}">
+            <h1>${message}</h1>
+        </c:if>
+        
+
+    </div>
 
     <div class="center">
-    
-        <div class="content">
-            <div class="searchById">
-                <p>Search by ID</p>
-                    <form method="GET" action="/TeachersWebApp/TeacherSearchByIdController">
-                        <input name="searchInput1" type="text" class="search rounded" placeholder="Insert teacher's ID" autofocus/>
-                        <br><br>
+        <div class="searchById">
+            
+                <form method="GET" action="/TeachersWebApp/TeacherSearchByIdController">
+                    <p>Search by ID</p>
+                    <input name="searchInput1" type="text" class="search rounded" placeholder="Insert teacher's ID" required autofocus/>
+                    <br><br>
 
-                        <button class="search-btn rounded color-btn" type="submit">Search</button>
-                    </form>
-            </div>
-            <div class="searchByLastName">
-                <p>Search by Last Name</p>
-                    <form method="GET" action="/TeachersWebApp/TeacherSearchController">
-                        <input name="searchInput2" type="text" class="search rounded" placeholder="Insert teacher's Last Name" autofocus/>
-                        <br><br>
-
-                        <button class="search-btn rounded color-btn" type="submit">Search</button>
-                    </form>
-            </div>
-
+                    <button class="search-btn rounded color-btn" type="submit">Search</button>
+                </form>
         </div>
+        <div class="searchByLastName">
+            
+                <form method="GET" action="/TeachersWebApp/TeacherSearchController">
+                    <p>Search by Last Name</p>
+                    <input name="searchInput2" type="text" class="search rounded" placeholder="Insert teacher's Last Name" autofocus/>
+                    <br><br>
+
+                    <button class="search-btn rounded color-btn" type="submit">Search</button>
+                </form>
+        </div>
+
+        
     </div>
 
     
