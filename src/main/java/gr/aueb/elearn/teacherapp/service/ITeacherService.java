@@ -41,7 +41,7 @@ public interface ITeacherService {
 	 * 			and the server.
 	 */
 	
-	void deleteTeacher(TeacherDTO teacherDTO)
+	boolean deleteTeacher(TeacherDTO teacherDTO)
 			throws TeacherNotFoundException, SQLException;
 	
 	
