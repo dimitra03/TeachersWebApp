@@ -18,11 +18,11 @@
                 
                     <form method="POST" action="/TeachersWebApp/TeacherInsertController">
                         <p>Enter teacher's ID</p>
-                        <input name="id" type="text" class="insert rounded" placeholder="Id" autofocus/><br><br> 
+                        <input name="id" type="text" class="insert rounded" placeholder="Id" required autofocus/><br><br> 
                         <p>Enter teacher's Last Name</p>
-                        <input name="lastName" type="text" class="insert rounded" placeholder="Last name" autofocus/><br><br>
+                        <input name="lastName" type="text" class="insert rounded" placeholder="Last name" required autofocus/><br><br>
                         <p>Enter teacher's First Name</p>
-                        <input name="firstName" type="text" class="insert rounded" placeholder="First name" autofocus/>
+                        <input name="firstName" type="text" class="insert rounded" placeholder="First name" required autofocus/>
                         <br><br>
                         <button class="insert-btn" type="submit">Insert</button>
                     </form>
