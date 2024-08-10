@@ -1,18 +1,7 @@
 body {
-	
 	margin: 0;
     align-items: center;
     
-}
-
-.center {
-	align-items: center;
-    
-}
-
-.returnButton {
-    background-color: white;
-
 }
 
 table {
@@ -27,23 +16,5 @@ th, td {
 }
 
 th {
-    background-color: #286088; /* Light gray background for headers */
-}
-
-
-body {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: center; /* Center horizontally */
-    margin: 0; /* Remove default margin */
-    text-align: center; /* Center text inside elements */
-    
-    align-items: center;
-}
-
-/* Optional styling for content */
-.content {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #295b80; /* background for headers */
 }
