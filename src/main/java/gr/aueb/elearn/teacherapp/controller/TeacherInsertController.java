@@ -44,8 +44,15 @@ public class TeacherInsertController extends HttpServlet {
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		} catch (TeacherIdAlreadyExistsException e2) {
-			response.getWriter().write("<h1 style=\"color:red\">Teacher already exist</h1>");
-			request.getRequestDispatcher("/jsps/teachermenu.jsp").include(request, response);
+			/*
+			 * response.getWriter().
+			 * write("<h1 style=\"color:red\">Teacher already exist</h1>");
+			 * request.getRequestDispatcher("/jsps/teachermenu.jsp").include(request,
+			 * response);
+			 */
+			String error = "idexists";
+			request.setAttribute("error", error);
+			request.getRequestDispatcher("/jsps/errorpage.jsp").forward(request, response);
 		}	
 	}
 }
