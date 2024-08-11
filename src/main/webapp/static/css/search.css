@@ -1,0 +1,99 @@
+/* body {
+    background-color: #286088;
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    margin: 0;
+} */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1c5075, #3a658d);
+    /* background: linear-gradient(0deg, #5E8CB7 0%, #41698E 35%, #286088 100%); */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    color: #ebebeb;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-style:normal;
+    font-weight: bold;
+    line-height: normal;
+    text-decoration: solid;
+   
+}
+
+.top-btn {
+    position: absolute; /* Position the button container absolutely */
+    top: 20px; /* Distance from the top of the page */
+    left: 20px; /* Distance from the left of the page */
+    
+}
+
+.returnButton {
+    width: 170px;        /* Set the width of the button */
+    height: 40px; 
+    padding: 10px 20px; /* Add padding for better appearance */
+    font-size: 18px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #9DCEED; /* Change background color */
+    color: black;        /* Set text color */
+    border: none;        /* Remove border */
+    border-radius: 9px;  /* Optional: make edges rounded */
+    font-family: "Crimson Text";
+}
+
+.center {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.extraMessage {
+    text-align: center;
+    margin-top: 10px;
+}
+
+input[type=text].search {
+	width: 200px;
+	height: 50px;
+	background-image: url('/TeachersWebApp/static/img/search.png');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: 45px 45px;
+	padding-left: 45px;
+    border-radius: 12px;
+    
+}
+
+.searchById p {
+    color: #FFF;
+font-family: "Crimson Text";
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.searchByLastName p {
+    color: #FFF;
+font-family: "Crimson Text";
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.search-btn {
+        width: 150px;        /* Set the width of the button */
+        height: 50px;        /* Set the height of the button */
+        padding: 15px 30px;  /* Add padding for more internal space */
+        font-size: 18px;     /* Increase the font size */
+        background-color: #9DCEED; /* Change background color */
+        color: black;        /* Set text color */
+        border: none;        /* Remove border */
+        border-radius: 5px;  /* Optional: make edges rounded */
+        cursor: pointer;     /* Change cursor on hover */
+        border-radius: 9px;
+        
+}
