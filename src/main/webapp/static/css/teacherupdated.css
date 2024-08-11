@@ -3,7 +3,48 @@ html, body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #1c5075, #3a658d);
-    /* background: linear-gradient(0deg, #5E8CB7 0%, #41698E 35%, #286088 100%); */
     background-attachment: fixed;
     background-size: cover;
+}
+
+.heading {
+    color: #58f575;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.teacher {
+    text-align:center;
+}
+
+.returnButton {
+        
+        width: 170px;        /* Set the width of the button */
+        height: 40px; 
+        padding: 10px 20px; /* Add padding for better appearance */
+        font-size: 18px; /* Set font size */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        background-color: #9DCEED; /* Change background color */
+        color: black;        /* Set text color */
+        border: none;        /* Remove border */
+        border-radius: 9px;  /* Optional: make edges rounded */
+        font-family: "Crimson Text";
+    
+    
+}
+
+h1 {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.details {
+    color: #FFF;
+    font-family: "Crimson Text";
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
 }
