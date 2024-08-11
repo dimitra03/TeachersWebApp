@@ -14,7 +14,7 @@
 </properties>
   
   
-  <dependencies>
+ <dependencies>
   
   <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 	<dependency>
@@ -53,13 +53,15 @@
 	</dependency>
     
     <!-- https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-jstlel -->
-<dependency>
-    <groupId>org.apache.taglibs</groupId>
-    <artifactId>taglibs-standard-jstlel</artifactId>
-    <version>1.2.5</version>
-</dependency>
+	<dependency>
+    	<groupId>org.apache.taglibs</groupId>
+    	<artifactId>taglibs-standard-jstlel</artifactId>
+    	<version>1.2.5</version>
+	</dependency>
     
-  </dependencies>
+
+</dependencies>
+
   <build>
     <finalName>TeachersWebApp</finalName>
   </build>
