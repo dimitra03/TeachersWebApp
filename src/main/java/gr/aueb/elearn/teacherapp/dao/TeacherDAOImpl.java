@@ -24,10 +24,7 @@ public class TeacherDAOImpl implements ITeacherDAO {
 		pst.setString(2, teacher.getLastName());
 		pst.setString(3, teacher.getFirstName());
 
-		int n = pst.executeUpdate();
-		
-		JOptionPane.showMessageDialog(null, n + " Record inserted.", "INSERT", 
-				JOptionPane.PLAIN_MESSAGE);
+		pst.executeUpdate();
 		
 		
 		//pst.close();
@@ -36,40 +33,23 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	}
 
 	@Override
-	public boolean delete(Teacher teacher) throws SQLException {
+	public void delete(Teacher teacher) throws SQLException {
 		String sql = "DELETE FROM TEACHERS WHERE TEACHER_ID = ?";
-		int dialogButton;
-		boolean done = false;
+		
+		
 		PreparedStatement pst = openConnection().prepareStatement(sql);
 		pst.setInt(1, teacher.getId());
-		
-        dialogButton = JOptionPane.showConfirmDialog (null, "Are you sure?", 
-      		  "Warning", JOptionPane.YES_NO_OPTION);
-
-        if (dialogButton == JOptionPane.YES_OPTION){
-			/*
-			 * int numberOfRowsAffected = pst.executeUpdate(); JOptionPane.showMessageDialog
-			 * (null, numberOfRowsAffected + " rows deleted successfully", "DELETE",
-			 * JOptionPane.INFORMATION_MESSAGE);
-			 */
-        	pst.executeUpdate();
-        	done = true;
-        }
-        
-
+		pst.executeUpdate();
+        	
       	// pst.close();
         closeStmt(pst);
       	closeConnection();
-      	return done;
+      
 	}
 
 	@Override
 	public void update(Teacher oldTeacher, Teacher newTeacher) throws SQLException {
-		/*
-		 * String sql = "UPDATE TEACHERS SET S_NAME = '" + newTeacher.getLastName() +
-		 * "', " + "F_NAME = '" + newTeacher.getFirstName() + "' WHERE TEACHER_ID = " +
-		 * oldTeacher.getId(); System.out.println(sql);
-		 */
+		
 		String sql = "UPDATE TEACHERS SET S_NAME = ?, F_NAME = ? WHERE TEACHER_ID = ?";
 				
 		
@@ -78,10 +58,7 @@ public class TeacherDAOImpl implements ITeacherDAO {
 		pst.setString(2, newTeacher.getFirstName());
 		pst.setInt(3, oldTeacher.getId());
 		
-		int numberOfRowsAffected = pst.executeUpdate();
-	      
-	    JOptionPane.showMessageDialog(null, numberOfRowsAffected + " rows affected", 
-	    		  "UPDATE", JOptionPane.PLAIN_MESSAGE);
+		pst.executeUpdate();
 		  
 	    //pst.close();
 	    closeStmt(pst);

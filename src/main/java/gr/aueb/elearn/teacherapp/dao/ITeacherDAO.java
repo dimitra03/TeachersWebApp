@@ -6,7 +6,7 @@ import gr.aueb.elearn.teacherapp.model.Teacher;
 
 public interface ITeacherDAO {
 	void insert(Teacher teacher) throws SQLException;
-	boolean delete(Teacher teacher) throws SQLException;
+	void delete(Teacher teacher) throws SQLException;
 	void update(Teacher oldTeacher, Teacher newTeacher) throws SQLException;
 	List<Teacher> getTeachersBySurname(String surname) throws SQLException;
 	List<Teacher> getTeacherById(int id) throws SQLException;
