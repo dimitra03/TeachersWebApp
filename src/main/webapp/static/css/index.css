@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1c5075, #3a658d);
+    /* background: linear-gradient(0deg, #5E8CB7 0%, #41698E 35%, #286088 100%); */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.usericon {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+.homeicon {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+}
+
+
+.menu {
+    background: #1c4f73;
+    margin-top: 0;
+    
+}
+
+.menu > ul {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: underline;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.center {
+    text-align: center; /* Center text within the div */
+    padding: 20px; /* Add padding for visual appeal */
+
+}
+
+.question {
+    margin-bottom: 20px; /* Space between question and options */
+}
+
+p {
+    color: #FFF;
+    font-family: "Crimson Text";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+button {
+    width: 150px;        /* Set the width of the button */
+    height: 50px;        /* Set the height of the button */
+    padding: 15px 30px;  /* Add padding for more internal space */
+    font-size: 18px;     /* Increase the font size */
+    background-color: #9DCEED; /* Change background color */
+    color: black;        /* Set text color */
+    border: none;        /* Remove border */
+    border-radius: 5px;  /* Optional: make edges rounded */
+    cursor: pointer;     /* Change cursor on hover */
+    border-radius: 9px;
+}

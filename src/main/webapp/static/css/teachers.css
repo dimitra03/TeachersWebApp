@@ -1,0 +1,20 @@
+body {
+	margin: 0;
+    align-items: center;
+    
+}
+
+table {
+    border-collapse: collapse; /* Ensures borders do not overlap */
+    width: 100%; /* Makes the table take the full width */
+}
+
+th, td {
+    padding: 10px; /* Adds space inside each header and data cell */
+    text-align: left; /* Aligns text to the left */
+    border: 1px solid #ddd; /* Adds a border to cells */
+}
+
+th {
+    background-color: #295b80; /* background for headers */
+}
