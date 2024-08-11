@@ -47,12 +47,10 @@ public class TeacherDeleteController extends HttpServlet {
 		
 		try {
 			
-			if (teacherServ.deleteTeacher(teacherDTO) == true) {
-				request.setAttribute("deletedTeacher", teacherDTO);
-				request.getRequestDispatcher("/jsps/teacherdeleted.jsp").forward(request, response);
-			} else {
-				request.getRequestDispatcher("/jsps/search.jsp").forward(request, response);
-			}
+			teacherServ.deleteTeacher(teacherDTO);
+			request.setAttribute("deletedTeacher", teacherDTO);
+			request.getRequestDispatcher("/jsps/teacherdeleted.jsp").forward(request, response);
+				
 			//request.getRequestDispatcher("/TeacherSearchController").forward(request, response);	
 		} catch (SQLException e1) {
 			e1.printStackTrace();
