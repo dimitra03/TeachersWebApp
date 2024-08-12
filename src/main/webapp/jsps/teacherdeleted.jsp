@@ -11,14 +11,16 @@
 	<script src="/TeachersWebApp/static/js/functions.js"></script>
 </head>
 <body>
+
 	<div class="teacher">
 		<h1 class="heading">Teacher with</h1>
-			<p class="details">ID: ${deletedTeacher.id} <br>
+		<p class="details">ID: ${deletedTeacher.id} <br>
 			Last Name: ${deletedTeacher.lastName} <br>
 			First Name: ${deletedTeacher.firstName} </p>
-			<p>was successfully deleted!</p>
+		<p>was successfully deleted!</p>
 		
 		<button class="returnButton" onclick="goToMainPage()">Return</button>
 	</div>
+
 </body>
 </html>
