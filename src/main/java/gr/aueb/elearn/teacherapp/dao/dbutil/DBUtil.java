@@ -16,7 +16,7 @@ public class DBUtil {
 	private DBUtil() {}
 	
 	public static Connection openConnection() throws SQLException  {
-		String url = "jdbc:mysql://localhost:3306/teachersDB?useSSL=false";
+		String url = "jdbc:mysql://localhost:3306/teachersDB?serverTimezone=UTC&useSSL=false";
 		String username = "dimitratel";
 		String password = "2003";
 		
@@ -49,6 +49,5 @@ public class DBUtil {
 			e.printStackTrace();
 		}
 	}
-	
-	
+		
 }
