@@ -7,7 +7,6 @@ import gr.aueb.elearn.teacherapp.dao.ITeacherDAO;
 import gr.aueb.elearn.teacherapp.dto.TeacherDTO;
 import gr.aueb.elearn.teacherapp.model.Teacher;
 import gr.aueb.elearn.teacherapp.service.exceptions.TeacherIdAlreadyExistsException;
-import gr.aueb.elearn.teacherapp.service.exceptions.TeacherNotFoundException;
 
 public class TeacherServiceImpl implements ITeacherService {
 	
@@ -34,32 +33,22 @@ public class TeacherServiceImpl implements ITeacherService {
 	}
 
 	@Override
-	public void deleteTeacher(TeacherDTO teacherDTO) throws TeacherNotFoundException, SQLException {
+	public void deleteTeacher(TeacherDTO teacherDTO) throws SQLException {
 		Teacher teacherToDelete = new Teacher();
 		teacherToDelete.setId(teacherDTO.getId());
-		
-		if ((teacherDAO.getTeacherById(teacherToDelete.getId())) == null) 
-			throw new TeacherNotFoundException(teacherToDelete);
-		
 		teacherDAO.delete(teacherToDelete);
 	}
 
 	@Override
 	public void updateTeacher(TeacherDTO oldTeacherDTO, TeacherDTO newTeacherDTO) 
-			throws TeacherNotFoundException, SQLException {
+			throws SQLException {
 		Teacher teacherToUpdate = new Teacher();
 		teacherToUpdate.setId(oldTeacherDTO.getId());
 		
 		Teacher newTeacher = new Teacher();
-		//newTeacher.setId(newTeacherDTO.getId());
 		newTeacher.setLastName(newTeacherDTO.getLastName());
 		newTeacher.setFirstName(newTeacherDTO.getFirstName());	
-		
-		if ((teacherDAO.getTeacherById(teacherToUpdate.getId())) == null) 
-			throw new TeacherNotFoundException(teacherToUpdate);
-		
 		teacherDAO.update(teacherToUpdate, newTeacher);
-		
 	}
 
 	@Override

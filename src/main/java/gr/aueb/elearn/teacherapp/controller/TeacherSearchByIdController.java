@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,16 +16,12 @@ import gr.aueb.elearn.teacherapp.model.Teacher;
 import gr.aueb.elearn.teacherapp.service.ITeacherService;
 import gr.aueb.elearn.teacherapp.service.TeacherServiceImpl;
 
-
-
 /**
  * Servlet implementation class TeacherSearchByIdController
  */
-
 public class TeacherSearchByIdController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -52,7 +47,7 @@ public class TeacherSearchByIdController extends HttpServlet {
 			request.setAttribute("error", error);
 			request.getRequestDispatcher("/jsps/errorpage.jsp").forward(request, response);
 		}
+	
 	}
 
-	
 }
