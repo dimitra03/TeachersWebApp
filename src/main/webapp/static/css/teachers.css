@@ -1,7 +1,6 @@
 body {
 	margin: 0;
     align-items: center;
-    
 }
 
 table {
@@ -16,5 +15,5 @@ th, td {
 }
 
 th {
-    background-color: #295b80; /* background for headers */
+    background-color: #295b80; /* Background for headers */
 }
