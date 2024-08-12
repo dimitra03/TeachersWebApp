@@ -11,14 +11,16 @@
 	<script src="/TeachersWebApp/static/js/functions.js"></script>
 </head>
 <body>
+	
 	<div class="teacher">
 		<h1 class="heading">Teacher with</h1>
-			<p class="details">ID: ${insertedTeacher.id} <br>
+		<p class="details">ID: ${insertedTeacher.id} <br>
 			Last Name: ${insertedTeacher.lastName} <br>
 			First Name: ${insertedTeacher.firstName} </p>
-			<p>was successfully inserted!</p>
+		<p>was successfully inserted!</p>
 		
 		<button class="returnButton" onclick="goToMainPage()">Return</button>
 	</div>
+
 </body>
 </html>
