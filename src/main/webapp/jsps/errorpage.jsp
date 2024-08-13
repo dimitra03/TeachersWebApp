@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false" %>
 <%@ page pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,9 @@
     <script src="/TeachersWebApp/static/js/functions.js"></script>
 </head>
 <body>
+    
     <h1>Error</h1>
+    
     <div class="showError">
         <c:choose>
             <c:when test="${error == 'idmissing'}">
@@ -23,17 +26,23 @@
             <c:when test="${error == 'lastNameNotExists'}">
                 <p>This teacher does not exist. Please provide another last name.</p>
             </c:when>
-            
-
             <c:otherwise>
                 <p>An unexpected error occurred. Please try again.</p>
             </c:otherwise>    
         </c:choose>
-        <button class="returnButton" onclick="goToMainPage()">Return</button>
-
+        
+        <c:choose>
+            <c:when test="${error == 'idmissing'}">
+                <button class="returnButton" onclick="goToSearchPage()">Return</button>
+            </c:when>
+            <c:when test="${error == 'idexists'}">
+                <button class="returnButton" onclick="goToInsertPage()">Return</button>
+            </c:when>
+            <c:when test="${error == 'lastNameNotExists'}">
+                <button class="returnButton" onclick="goToSearchPage()">Return</button>
+            </c:when>
+        </c:choose>
     </div>
-    
-    
-
+            
 </body>
 </html>

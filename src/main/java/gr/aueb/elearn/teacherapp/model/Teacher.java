@@ -3,7 +3,7 @@ package gr.aueb.elearn.teacherapp.model;
 /**
  * Teacher POJO/Java Bean class. 
  * 
- * @author A. Androutsos
+ * @author D.Telatinidou
  * @version 0.1
  */
 public class Teacher {

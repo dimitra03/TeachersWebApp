@@ -3,11 +3,9 @@ html, body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #1c5075, #3a658d);
-    /* background: linear-gradient(0deg, #5E8CB7 0%, #41698E 35%, #286088 100%); */
     background-attachment: fixed;
     background-size: cover;
 }
-
 
 .usericon {
     position: absolute;
@@ -21,11 +19,9 @@ html, body {
     top: 25px;
 }
 
-
 .menu {
-    background: #1c4f73;
-    margin-top: 0;
-    
+    background: #19486a;
+    margin-top: 0;  
 }
 
 .menu > ul {
@@ -33,7 +29,6 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 .menu li {
@@ -66,14 +61,14 @@ p {
 }
 
 button {
-    width: 150px;        /* Set the width of the button */
-    height: 50px;        /* Set the height of the button */
-    padding: 15px 30px;  /* Add padding for more internal space */
-    font-size: 18px;     /* Increase the font size */
-    background-color: #9DCEED; /* Change background color */
-    color: black;        /* Set text color */
-    border: none;        /* Remove border */
-    border-radius: 5px;  /* Optional: make edges rounded */
-    cursor: pointer;     /* Change cursor on hover */
+    width: 150px;        
+    height: 50px;        
+    padding: 15px 30px;  
+    font-size: 18px;    
+    background-color: #9DCEED; 
+    color: black;        
+    border: none;      
+    border-radius: 5px; 
+    cursor: pointer;   
     border-radius: 9px;
 }

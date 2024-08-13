@@ -20,3 +20,7 @@ function goToUpdatePage() {
     var message = 'Search for the teacher you want to update';
     window.location.href = '/TeachersWebApp/jsps/search.jsp?mes=' + encodeURIComponent(message);  
 }
+
+function confirmDelete(teacherName) {
+    return confirm(`The teacher ${teacherName} will be deleted`);
+}
