@@ -7,7 +7,7 @@ html, body {
     background-size: cover;
 }
 
-h1 {
+h1, .title {
     color: #ebebeb;
     font-family: "Roboto", sans-serif;
     font-size: 32px;
@@ -87,3 +87,4 @@ input[type=text].search {
     cursor: pointer;     
     border-radius: 9px;     
 }
+
