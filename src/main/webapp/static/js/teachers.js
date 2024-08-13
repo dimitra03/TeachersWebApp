@@ -22,7 +22,7 @@ function handleResults(response) {
     if (jQuery.isEmptyObject(response)) {
     	$(".teachers-list").html("No teacher is found");
     } else {   
-	    let output = "<tr><th>Id</th><th>Όνομα</th><th>Επώνυμο</th></tr>";
+	    let output = "<tr><th>Id</th><th>First Name</th><th>Last Name</th></tr>";
 	
 	    for (let teacher of teachersList) {
 	        output += "<tr><td>"

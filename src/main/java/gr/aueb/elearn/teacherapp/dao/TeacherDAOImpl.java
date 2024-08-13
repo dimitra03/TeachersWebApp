@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
 import gr.aueb.elearn.teacherapp.model.Teacher;
 
 public class TeacherDAOImpl implements ITeacherDAO {
@@ -24,74 +23,42 @@ public class TeacherDAOImpl implements ITeacherDAO {
 		pst.setString(2, teacher.getLastName());
 		pst.setString(3, teacher.getFirstName());
 
-		int n = pst.executeUpdate();
+		pst.executeUpdate();
 		
-		JOptionPane.showMessageDialog(null, n + " Record inserted.", "INSERT", 
-				JOptionPane.PLAIN_MESSAGE);
-		
-		
-		//pst.close();
 		closeStmt(pst);
 		closeConnection();
 	}
 
 	@Override
-	public boolean delete(Teacher teacher) throws SQLException {
+	public void delete(Teacher teacher) throws SQLException {
 		String sql = "DELETE FROM TEACHERS WHERE TEACHER_ID = ?";
-		int dialogButton;
-		boolean done = false;
+		
 		PreparedStatement pst = openConnection().prepareStatement(sql);
 		pst.setInt(1, teacher.getId());
 		
-        dialogButton = JOptionPane.showConfirmDialog (null, "Are you sure?", 
-      		  "Warning", JOptionPane.YES_NO_OPTION);
-
-        if (dialogButton == JOptionPane.YES_OPTION){
-			/*
-			 * int numberOfRowsAffected = pst.executeUpdate(); JOptionPane.showMessageDialog
-			 * (null, numberOfRowsAffected + " rows deleted successfully", "DELETE",
-			 * JOptionPane.INFORMATION_MESSAGE);
-			 */
-        	pst.executeUpdate();
-        	done = true;
-        }
-        
-
-      	// pst.close();
+		pst.executeUpdate();
+        	
         closeStmt(pst);
       	closeConnection();
-      	return done;
 	}
 
 	@Override
 	public void update(Teacher oldTeacher, Teacher newTeacher) throws SQLException {
-		/*
-		 * String sql = "UPDATE TEACHERS SET S_NAME = '" + newTeacher.getLastName() +
-		 * "', " + "F_NAME = '" + newTeacher.getFirstName() + "' WHERE TEACHER_ID = " +
-		 * oldTeacher.getId(); System.out.println(sql);
-		 */
 		String sql = "UPDATE TEACHERS SET S_NAME = ?, F_NAME = ? WHERE TEACHER_ID = ?";
 				
-		
 		PreparedStatement pst = openConnection().prepareStatement(sql);
 		pst.setString(1, newTeacher.getLastName());
 		pst.setString(2, newTeacher.getFirstName());
 		pst.setInt(3, oldTeacher.getId());
 		
-		int numberOfRowsAffected = pst.executeUpdate();
-	      
-	    JOptionPane.showMessageDialog(null, numberOfRowsAffected + " rows affected", 
-	    		  "UPDATE", JOptionPane.PLAIN_MESSAGE);
-		  
-	    //pst.close();
+		pst.executeUpdate();
+
 	    closeStmt(pst);
 		closeConnection();
 	}
 
 	@Override
 	public List<Teacher> getTeachersBySurname(String surname) throws SQLException {
-		//String sql = "SELECT TEACHER_ID, S_NAME, F_Name FROM TEACHERS WHERE S_NAME LIKE '" + surname + "%'";
-				
 		String sql = "SELECT TEACHER_ID, S_NAME, F_Name FROM TEACHERS WHERE S_NAME LIKE ?";
 		
 	    PreparedStatement pst =  openConnection().prepareStatement(sql);
@@ -101,10 +68,8 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	    
 	    List<Teacher> teachers = new ArrayList<>();
 	    
-	    //rs.beforeFirst();
 	    while (rs.next()) {
 	    	Teacher teacher = new Teacher();
-		    	
 	    	teacher.setId(rs.getInt("TEACHER_ID"));
 	    	teacher.setLastName(rs.getString("S_NAME"));
 	    	teacher.setFirstName(rs.getString("F_NAME"));
@@ -132,12 +97,11 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	    
 	    if (rs.next()) {
 	    	Teacher teacher = new Teacher();
-	    	
 	    	teacher.setId(rs.getInt("TEACHER_ID"));
 	    	teacher.setLastName(rs.getString("S_NAME"));
 	    	teacher.setFirstName(rs.getString("F_NAME"));
 	    	teachers.add(teacher); 	
-	    	//return teacher;
+	    	
 	    	teacherFound = true;
 	    }
 	    
@@ -146,7 +110,6 @@ public class TeacherDAOImpl implements ITeacherDAO {
 	    closeConnection();
 	    
 	    return (teacherFound) ? teachers : null;
-	    
-	    //return null;
-	}	
+	}
+	
 }

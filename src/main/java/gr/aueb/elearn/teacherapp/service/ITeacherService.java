@@ -5,7 +5,6 @@ import java.util.List;
 import gr.aueb.elearn.teacherapp.dto.TeacherDTO;
 import gr.aueb.elearn.teacherapp.model.Teacher;
 import gr.aueb.elearn.teacherapp.service.exceptions.TeacherIdAlreadyExistsException;
-import gr.aueb.elearn.teacherapp.service.exceptions.TeacherNotFoundException;
 
 public interface ITeacherService {	
 	
@@ -32,18 +31,12 @@ public interface ITeacherService {
 	 * 
 	 * @param teacherDTO 
 	 * 			DTO object that contains the data.
-	 * @throws TeacherIdAlreadyExistsException
-	 * 			if any Teacher identified by their id 
-	 * 			needed to be inserted has been already
-	 * 			inserted. 
 	 * @throws SQLException
 	 * 			if any error happens between the driver
 	 * 			and the server.
 	 */
-	
-	boolean deleteTeacher(TeacherDTO teacherDTO)
-			throws TeacherNotFoundException, SQLException;
-	
+	void deleteTeacher(TeacherDTO teacherDTO)
+			throws SQLException;
 	
 	/**
 	 * Updates a {@link Teacher} based on the data carried by the
@@ -55,17 +48,12 @@ public interface ITeacherService {
 	 * @param newTeacherDTO
 	 * 			DTO object that contains the data of the 
 	 * 			new {@link Teacher}.
-	 * @throws TeacherNotFoundException
-	 * 			if any Teacher identified by their id 
-	 * 			was not found. 
 	 * @throws SQLException
 	 * 			if any error happens between the driver
 	 * 			and the server.
 	 */
 	void updateTeacher(TeacherDTO oldTeacherDTO, TeacherDTO newTeacherDTO) 
-			throws TeacherNotFoundException, SQLException;
-	
-	
+			throws SQLException;
 	
 	/**
 	 * Searches and gets back to the caller a list
@@ -88,7 +76,23 @@ public interface ITeacherService {
 	List<Teacher> getTeachersBySurname(String surname) 
 			throws SQLException;
 
-
+	/**
+	 * Searches and gets back to the caller a list
+	 * of the {@link Teacher} objects identified by
+	 * by their id.
+	 * 
+	 * @param id
+	 * 			an int that contains the
+	 * 			id, of the {@link Teacher}
+	 * 			objects we are looking for. 
+	 * @return
+	 * 			a List that contains the results of
+	 * 			the search, that is a List of {@link Teacher}
+	 * 			objects. 
+	 * @throws SQLException
+	 * 			if any error happens between the driver
+	 * 			and the server.
+	 */
 	List<Teacher> getTeacherById(int id) throws SQLException;
 	
 }

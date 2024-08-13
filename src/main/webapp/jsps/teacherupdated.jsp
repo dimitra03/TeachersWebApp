@@ -6,17 +6,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Επιτυχής Ενημέρωση</title>
-    <link rel="stylesheet" href="/TeachersWebApp/static/teacherupdated.css">
+<title>Successful Update</title>
+    <link rel="stylesheet" href="/TeachersWebApp/static/css/teacherupdated.css">
     <script src="/TeachersWebApp/static/js/functions.js"></script>
 </head>
 <body>
-	<p>	Teacher successfully updated! with: ${updatedTeacher.id} <br>
-	 	${updatedTeacher.lastName} <br>
-	 	${updatedTeacher.firstName} <br>
-	</p>
 	
-	<a href="/TeachersWebApp/index.html">Επιστροφή</a>
+	<div class="teacher">
+		<h1 class="heading">Teacher was successfully updated!</h1>
+		<h1>New Teacher</h1>
+		<p class="details">ID: ${updatedTeacher.id} <br>
+			Last Name: ${updatedTeacher.lastName} <br>
+			First Name: ${updatedTeacher.firstName} 
+		</p>
+			
+		<button class="returnButton" onclick="goToMainPage()">Return</button>
+		
+	</div>
 
 </body>
 </html>

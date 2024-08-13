@@ -4,12 +4,6 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>LoginController</servlet-name>
-  	<display-name>LoginController</display-name>
-  	<description></description>
-  	<servlet-class>gr.aueb.elearn.teacherapp.controller.LoginController</servlet-class>
-  </servlet>
   
   <servlet>
   	<servlet-name>TeacherDeleteController</servlet-name>
@@ -35,10 +29,13 @@
   	<description></description>
   	<servlet-class>gr.aueb.elearn.teacherapp.controller.TeacherSearchByIdController</servlet-class>
   </servlet>
-  <servlet-mapping>
-  	<servlet-name>LoginController</servlet-name>
-  	<url-pattern>/LoginController</url-pattern>
-  </servlet-mapping>
+  <servlet>
+  	<servlet-name>TeacherSearchController</servlet-name>
+  	<display-name>TeacherSearchController</display-name>
+  	<description></description>
+  	<servlet-class>gr.aueb.elearn.teacherapp.controller.TeacherSearchController</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>TeacherDeleteController</servlet-name>
   	<url-pattern>/TeacherDeleteController</url-pattern>
@@ -54,6 +51,10 @@
   <servlet-mapping>
   	<servlet-name>TeacherSearchByIdController</servlet-name>
   	<url-pattern>/TeacherSearchByIdController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TeacherSearchController</servlet-name>
+  	<url-pattern>/TeacherSearchController</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>
