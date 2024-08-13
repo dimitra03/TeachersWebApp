@@ -13,14 +13,14 @@ The Teachers Web App is a Maven-based Java web application connected to a MySQL 
 ## Prerequisites
 
 - **Java Development Kit (JDK)**: 8 or higher
-- **Apache Maven**: 3.x .[Download here](https://maven.apache.org/download.cgi).
+- **Apache Maven**: 3.x [Download here](https://maven.apache.org/download.cgi).
 - **Apache Tomcat**: 9.x or any compatible servlet container
-- **Git**: To clone the repository. [Download here](https://git-scm.com/downloads).
+- **Git**: To clone the repository [Download here](https://git-scm.com/downloads).
 - **MySQL**: Version 5.7 or higher
   
   Ensure that MySQL is installed and running on your system. If you do not have MySQL installed, you can download and install it from [MySQL's official website](https://dev.mysql.com/downloads/mysql/).
   
--**Database Setup**: After installing MySQL, you will need to create a database and import the provided schema.
+  **Database Setup**: After installing MySQL, you will need to create a database and import the provided schema.
   
 ## Installation
 
@@ -51,8 +51,9 @@ After building the application, you can run it by deploying to a servlet contain
 
    ```bash
    target/TeachersWebApp.war
+   ```
 
-Copy this WAR file to the webapps directory of your servlet container. For example, if you are using Tomcat:
+  Copy this WAR file to the webapps directory of your servlet container. For example, if you are using Tomcat:
 
   ```bash
   cp target/TeachersWebApp.war /path/to/tomcat/webapps/
@@ -60,13 +61,12 @@ Copy this WAR file to the webapps directory of your servlet container. For examp
 
 2. **Start the servlet container**:
 
-If your servlet container is not already running, start it. For example, to start Tomcat:
+  If your servlet container is not already running, start it. For example, to start Tomcat:
 
-    ```bash
-    /path/to/tomcat/bin/startup.bat
-    ```
+  ```bash
+  /path/to/tomcat/bin/startup.bat
+  ```
     
 3. **Access the application**:
 
-Once the servlet container is running and the WAR file is deployed, access the application in your web browser:
-[(http://localhost:8080/TeachersWebApp)]
+  Once the servlet container is running and the WAR file is deployed, access the application in your web browser: [http://localhost:8080/TeachersWebApp](http://localhost:8080/TeachersWebApp)
