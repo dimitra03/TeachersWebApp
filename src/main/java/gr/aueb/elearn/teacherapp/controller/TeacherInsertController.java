@@ -29,7 +29,7 @@ public class TeacherInsertController extends HttpServlet {
 		ITeacherDAO teacherDAO = new TeacherDAOImpl();
 		ITeacherService teacherServ = new TeacherServiceImpl(teacherDAO);
 		
-		response.setContentType("text/html");
+		response.setContentType("text/html; charset=UTF-8");
 		
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
