@@ -21,10 +21,14 @@ The Teachers Web App is a Maven-based Java web application connected to a MySQL 
 After installing MySQL, you will need to create a database and import the provided schema.
   
 1. **Run Schema Script:**
-  Execute the `teachersDB.sql` script to create the necessary tables and schema.
+  Execute the `teachersDB.sql` script to create the necessary tables and schema. You can change the username and password and set your own inside the script.
+    For example:
+    CREATE USER 'new_user' IDENTIFIED BY 'new_password';
+    GRANT ALL ON `teachersDB`.* TO 'new_user';
+    where 'new_user' is the new username that the user wants to create and 'new_password' is the new password for that username.
 
-2. **Set Database details**
-  Update the `application.properties` file with your database connection details.
+3. **Set Database details:**
+  If you changed the username and password you need to update the `application.properties` file with your new database connection details.
 
 ## Installation
 
@@ -42,5 +46,6 @@ After installing MySQL, you will need to create a database and import the provid
 
 3. **Access the Web Application**
 
-   Once the servlet container is running and the WAR file is deployed, access the application in your web browser: [http://localhost:8080/TeachersWebApp](http://localhost:8080/TeachersWebApp)
+   Once the servlet container is running and the WAR file is deployed, access the application in your web browser:
+   [http://localhost:8080/TeachersWebApp](http://localhost:8080/TeachersWebApp)
 
